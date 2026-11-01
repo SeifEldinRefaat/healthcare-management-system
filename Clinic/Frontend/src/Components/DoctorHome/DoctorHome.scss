@@ -1,0 +1,413 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+
+$char-w: 1ch;
+$gap: 0.5 * $char-w;
+$n-char: 2;
+$in-w: $n-char * ($char-w + $gap);
+
+.DoctorHome {
+  body {
+    font-family: "Montserrat", sans-serif;
+  }
+
+  .nav-color-bg {
+    background-color: rgba(147, 175, 218, 0.3);
+  }
+
+  .nav-link {
+    color: #000;
+  }
+
+  .information-div {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    font-weight: 700;
+    background-color: rgb(224, 233, 241);
+  }
+
+  h1 {
+    font-weight: 700;
+    font-size: 50px;
+  }
+
+  .clinic-name {
+    color: rgb(62, 87, 170);
+  }
+
+  .body {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+  }
+
+  .description {
+    margin-top: -5rem;
+    background-color: #fff;
+    box-shadow: 2px 2px 2px 2px;
+    width: 30%;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .description p {
+    font-size: 14px;
+    text-align: left;
+  }
+
+  .footer {
+    margin-top: 8rem;
+  }
+
+  .footer-in {
+    margin: 0;
+    justify-content: center;
+  }
+
+  .headers {
+    text-align: center;
+  }
+
+  .footer h3 {
+    margin-bottom: 2rem;
+    font-weight: 600;
+  }
+
+  .col-4 h3 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-size: 20px;
+    text-align: left;
+  }
+
+  .footer .col-4 {
+    margin: 1rem;
+    width: 25%;
+    border-radius: 25px;
+    box-shadow: 1px 1px 1px 1px;
+    padding: 2rem;
+  }
+
+  .footer-in {
+    text-align: left;
+  }
+
+  .col-4 p {
+    font-size: 14px;
+    text-align: left;
+  }
+  .input-box {
+    padding: 5px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    border: 1px dashed #000;
+    border-radius: 3px;
+  }
+  .input-box:focus {
+    outline: none;
+    border-color: #66afe9;
+    box-shadow: 0 0 8px rgba(102, 175, 233, 0.6);
+  }
+  .input-box::placeholder {
+    color: #999;
+  }
+  .pentosquare-icon {
+    cursor: pointer;
+    position: relative;
+  }
+
+  .parent-profile {
+    margin-top: 7rem;
+    margin-left: 2rem;
+    display: flex;
+    justify-content: space-between;
+  }
+  .container-profile {
+    margin-top: 3rem;
+    display: grid;
+    grid-template-rows: auto auto auto;
+    align-content: space-evenly;
+    gap: 1.5rem;
+    justify-content: left;
+    text-align: left;
+  }
+
+  .container-profile-item {
+    display: grid;
+    grid-template-columns: 13rem auto auto;
+    align-content: space-evenly;
+  }
+
+  .container-profile-item span {
+    font-size: 20px;
+  }
+
+  .container-profile-item-left {
+    color: #4f4f3b;
+    display: flex;
+    gap: 1rem;
+  }
+
+  .container-profile-item-right {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .tooltip {
+    visibility: visible;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    padding: 0.5rem;
+    border-radius: 6px;
+    position: absolute;
+    z-index: 1;
+    opacity: 1;
+    transition: opacity 0.3s;
+  }
+
+  .wallet {
+    width: 300px;
+    height: 150px;
+    background-color: #5a5c69;
+    border-radius: 0 0 50px 50px;
+    position: relative;
+    left: -250px;
+    top: 150px;
+  }
+
+  .wallet-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+  }
+
+  .hidden-content {
+    position: absolute;
+    width: 290px;
+    top: 0;
+    left: 5px;
+    right: 0;
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+    background-color: #3c3d41;
+    transform: translateY(0%);
+    transition: transform 0.3s ease-in-out;
+    z-index: -1;
+  }
+
+  .wallet:hover .hidden-content {
+    transform: translateY(-100%);
+  }
+}
+
+.addapointment-parent {
+  display: flex;
+  font-size: 18px;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.form-prescription {
+  padding: 2rem;
+  display: flex;
+}
+
+.addapointment-item-div {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.addapointment-item-time {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.time-input-div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.addapointment-item input[type="date"] {
+  background-color: transparent;
+  outline: none;
+  border: none;
+}
+
+.time-input {
+  display: block;
+  //margin: 2em auto;
+  border: none;
+  padding: 0;
+  width: $in-w;
+  background: repeating-linear-gradient(
+      90deg,
+      dimgrey 0,
+      dimgrey $char-w,
+      transparent 0,
+      transparent $char-w + $gap
+    )
+    0 100% / #{$in-w - $gap} 2px no-repeat;
+  font: 3ch droid sans mono, consolas, monospace;
+  letter-spacing: $gap;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.circleXmark {
+  position: relative;
+  left: 7.5rem;
+  cursor: pointer;
+}
+
+input[type="checkbox"]:focus {
+  outline: none;
+  position: relative;
+}
+
+input[type="checkbox"] {
+  border: 2px solid #808080;
+  border-radius: 25px;
+}
+
+input[type="checkbox"]:not(:checked):focus::before {
+  opacity: 0.5; /* Makes the checkbox appear faded out when unchecked */
+}
+
+.NotesMedical-icon {
+  cursor: pointer;
+}
+
+.doctors-by-patient-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.doctors-by-patient-image {
+  margin-top: -4.3rem;
+  width: 110%;
+  height: auto;
+  object-fit: cover;
+}
+
+.doctors-by-patient-container-in {
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  justify-content: left;
+  padding: 3rem;
+  border: 2px solid #fff;
+  background-color: #fff;
+  height: 18rem;
+  z-index: 1;
+  position: relative;
+  top: -25rem;
+  right: 28rem;
+  gap: 1.5rem;
+}
+
+.doctors-by-patient-container-in .head {
+  color: green;
+  position: relative;
+  top: -1.5rem;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.form-view-patients-by-doctors-div {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-left: -2rem;
+}
+
+.form-view-patients-by-doctors-div input {
+  border-radius: 7px;
+  padding: 0.4rem;
+}
+
+.form-view-patients-by-doctors-div input[type="text"] {
+  width: 110%;
+}
+
+.form-view-patients-by-doctors-checkbox {
+  display: flex;
+  gap: 1rem;
+}
+
+.view-my-patients {
+  margin-top: -15rem;
+}
+
+.hr-file-upload {
+  height: 250px;
+  overflow: scroll;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 120%;
+  padding: 1rem;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+
+.hr-file-upload-item{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.faDownload{
+  cursor: pointer;
+}
+
+.faFileArrowUp{
+  cursor: pointer;
+  position: relative;
+  top: 0.5rem;
+}
+
+.hr-file-parent{
+  padding: 2rem 3rem;
+  padding-right: 5rem;
+  padding-left: 0;
+  font-size: 20px;
+}
+
+.fafilearrowup-div{
+  border-radius: 25px;
+  background-color: #000;
+  padding: 0;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  right: 37rem;
+  top: 12rem;
+}
+.labelShape{
+  border-radius: 10px;
+}
